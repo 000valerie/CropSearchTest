@@ -7,20 +7,31 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
-
+final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
+        navigationItem.largeTitleDisplayMode = .always
     }
 
     func setupUI() {
         let firstViewController: UIViewController = ViewController()
-        firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 0)
+        firstViewController.tabBarItem = UITabBarItem(title: "Dashboard", image: nil, tag: 0)
+
         let secondViewController: UIViewController = CoolerFacilityRiskAssessments()
-        secondViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 1)
-        let tabBarList = [firstViewController, secondViewController]
+        secondViewController.title = "Cooler Facility Risk Assessment"
+
+        let documentViewController: UIViewController = ViewController()
+        documentViewController.title = "Documents"
+
+        let navigationController: UINavigationController = UINavigationController()
+        navigationController.setViewControllers([documentViewController, secondViewController], animated: false)
+        navigationController.tabBarItem = UITabBarItem(title: "Food Safety", image: nil, tag: 1)
+
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.setToolbarHidden(false, animated: false)
+
+        let tabBarList = [firstViewController, navigationController]
         viewControllers = tabBarList
 
         selectedIndex = 1
