@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF71625726E68ABD005C26CA /* RiskAssessmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71625626E68ABD005C26CA /* RiskAssessmentTableViewCell.swift */; };
 		CF75422826E290E700110455 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF75422726E290E700110455 /* TabBarController.swift */; };
 		CFF53CF226E1418B008D51CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53CF126E1418B008D51CE /* AppDelegate.swift */; };
 		CFF53CF426E1418B008D51CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53CF326E1418B008D51CE /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF71625626E68ABD005C26CA /* RiskAssessmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskAssessmentTableViewCell.swift; sourceTree = "<group>"; };
 		CF75422726E290E700110455 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CFF53CEE26E1418B008D51CE /* CropSearchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropSearchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF53CF126E1418B008D51CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF71625826E6AFE3005C26CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF71625926E6B00D005C26CA /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF71625926E6B00D005C26CA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF71625626E68ABD005C26CA /* RiskAssessmentTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		CFF53CE526E1418A008D51CE = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +76,7 @@
 		CFF53CF026E1418B008D51CE /* CropSearchTest */ = {
 			isa = PBXGroup;
 			children = (
+				CF71625826E6AFE3005C26CA /* View */,
 				CFF53D0526E141D8008D51CE /* Controllers */,
 				CFF53CF126E1418B008D51CE /* AppDelegate.swift */,
 				CFF53CF326E1418B008D51CE /* SceneDelegate.swift */,
@@ -172,6 +191,7 @@
 				CFF53D0726E1421E008D51CE /* CoolerFacilityRiskAssessment.swift in Sources */,
 				CF75422826E290E700110455 /* TabBarController.swift in Sources */,
 				CFF53CF226E1418B008D51CE /* AppDelegate.swift in Sources */,
+				CF71625726E68ABD005C26CA /* RiskAssessmentTableViewCell.swift in Sources */,
 				CFF53CF426E1418B008D51CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
