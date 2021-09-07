@@ -18,7 +18,7 @@ final class TabBarController: UITabBarController {
         let firstViewController: UIViewController = ViewController()
         firstViewController.tabBarItem = UITabBarItem(title: "Dashboard", image: nil, tag: 0)
 
-        let secondViewController: UIViewController = CoolerFacilityRiskAssessments()
+        let secondViewController: UIViewController = RiskAssessmentsTableViewController()
         secondViewController.title = "Cooler Facility Risk Assessment"
 
         let documentViewController: UIViewController = ViewController()

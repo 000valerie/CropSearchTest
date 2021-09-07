@@ -10,6 +10,7 @@ import UIKit
 
 protocol RiskAssessmentTableViewCellDelegate: AnyObject {
     func onCommentButtonPress(_ indexPath: IndexPath)
+    func onStatusSegmentedControlChange(_ indexPath: IndexPath, status: Int)
 }
 
 final class RiskAssessmentTableViewCell: UITableViewCell {
@@ -86,6 +87,8 @@ private extension RiskAssessmentTableViewCell {
             break
         }
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+
+        delegate?.onStatusSegmentedControlChange(indexPath, status: segmentedControl.selectedSegmentIndex)
     }
 
     @objc func onCommentButtonPress(_ button: UIButton) {

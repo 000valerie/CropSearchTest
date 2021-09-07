@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		CF71625726E68ABD005C26CA /* RiskAssessmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71625626E68ABD005C26CA /* RiskAssessmentTableViewCell.swift */; };
+		CF71625C26E6DCF6005C26CA /* RiskAssessmentTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71625B26E6DCF6005C26CA /* RiskAssessmentTableViewHeader.swift */; };
 		CF75422826E290E700110455 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF75422726E290E700110455 /* TabBarController.swift */; };
 		CFF53CF226E1418B008D51CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53CF126E1418B008D51CE /* AppDelegate.swift */; };
 		CFF53CF426E1418B008D51CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53CF326E1418B008D51CE /* SceneDelegate.swift */; };
 		CFF53CF626E1418B008D51CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53CF526E1418B008D51CE /* ViewController.swift */; };
 		CFF53CFB26E1418B008D51CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF53CFA26E1418B008D51CE /* Assets.xcassets */; };
 		CFF53CFE26E1418B008D51CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF53CFC26E1418B008D51CE /* LaunchScreen.storyboard */; };
-		CFF53D0726E1421E008D51CE /* CoolerFacilityRiskAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53D0626E1421E008D51CE /* CoolerFacilityRiskAssessment.swift */; };
+		CFF53D0726E1421E008D51CE /* RiskAssessmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53D0626E1421E008D51CE /* RiskAssessmentsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF71625626E68ABD005C26CA /* RiskAssessmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskAssessmentTableViewCell.swift; sourceTree = "<group>"; };
+		CF71625B26E6DCF6005C26CA /* RiskAssessmentTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskAssessmentTableViewHeader.swift; sourceTree = "<group>"; };
 		CF75422726E290E700110455 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CFF53CEE26E1418B008D51CE /* CropSearchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropSearchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF53CF126E1418B008D51CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +29,7 @@
 		CFF53CFA26E1418B008D51CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF53CFD26E1418B008D51CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF53CFF26E1418B008D51CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF53D0626E1421E008D51CE /* CoolerFacilityRiskAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolerFacilityRiskAssessment.swift; sourceTree = "<group>"; };
+		CFF53D0626E1421E008D51CE /* RiskAssessmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskAssessmentsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				CF71625926E6B00D005C26CA /* Cells */,
+				CF71625B26E6DCF6005C26CA /* RiskAssessmentTableViewHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CF75422726E290E700110455 /* TabBarController.swift */,
-				CFF53D0626E1421E008D51CE /* CoolerFacilityRiskAssessment.swift */,
+				CFF53D0626E1421E008D51CE /* RiskAssessmentsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,11 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF53CF626E1418B008D51CE /* ViewController.swift in Sources */,
-				CFF53D0726E1421E008D51CE /* CoolerFacilityRiskAssessment.swift in Sources */,
+				CFF53D0726E1421E008D51CE /* RiskAssessmentsTableViewController.swift in Sources */,
 				CF75422826E290E700110455 /* TabBarController.swift in Sources */,
 				CFF53CF226E1418B008D51CE /* AppDelegate.swift in Sources */,
 				CF71625726E68ABD005C26CA /* RiskAssessmentTableViewCell.swift in Sources */,
 				CFF53CF426E1418B008D51CE /* SceneDelegate.swift in Sources */,
+				CF71625C26E6DCF6005C26CA /* RiskAssessmentTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

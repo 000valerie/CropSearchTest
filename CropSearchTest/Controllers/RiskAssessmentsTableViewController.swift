@@ -1,5 +1,5 @@
 //
-//  CoolerFacilityRiskAssessment.swift
+//  RiskAssessmentsTableViewController.swift
 //  CropSearchTest
 //
 //  Created by ler on 9/2/21.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class CoolerFacilityRiskAssessments: UITableViewController {
+final class RiskAssessmentsTableViewController: UITableViewController {
 
     private var items: [RiskAssessmentTableViewCell.Model] = [] {
         didSet {
@@ -22,6 +22,7 @@ final class CoolerFacilityRiskAssessments: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(RiskAssessmentTableViewCell.self, forCellReuseIdentifier: "RiskAssessmentTableViewCell")
+        tableView.register(RiskAssessmentTableViewHeader.self, forHeaderFooterViewReuseIdentifier: "RiskAssessmentTableViewHeader")
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
 
@@ -41,7 +42,7 @@ final class CoolerFacilityRiskAssessments: UITableViewController {
     }
 }
 
-extension CoolerFacilityRiskAssessments {
+extension RiskAssessmentsTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -57,20 +58,39 @@ extension CoolerFacilityRiskAssessments {
     }
 }
 
-extension CoolerFacilityRiskAssessments {
+extension RiskAssessmentsTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return items[indexPath.row].isExtended ? 100.0 : 50.0
     }
+
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RiskAssessmentTableViewHeader") as? RiskAssessmentTableViewHeader
+        let isValid: Bool = items.filter { $0.status != nil }.count == items.count
+        headerView?.configure(with: RiskAssessmentTableViewHeader.Model(title: "Areas of observation - please note concern(s) if any, as well as corrective action(s)", isValid: isValid))
+        return headerView
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45.0
+    }
 }
 
-extension CoolerFacilityRiskAssessments: RiskAssessmentTableViewCellDelegate {
+extension RiskAssessmentsTableViewController: RiskAssessmentTableViewCellDelegate {
     func onCommentButtonPress(_ indexPath: IndexPath) {
         items[indexPath.row].isExtended.toggle()
         tableView.reloadData()
     }
+
+    func onStatusSegmentedControlChange(_ indexPath: IndexPath, status: Int) {
+        let currentStatus: Int? = items[indexPath.row].status?.rawValue
+        if currentStatus != status {
+            items[indexPath.row].status = RiskAssessmentTableViewCell.Status(rawValue: status)
+            tableView.reloadData()
+        }
+    }
 }
 
-private extension CoolerFacilityRiskAssessments {
+private extension RiskAssessmentsTableViewController {
     func demo() {
         items = [
             RiskAssessmentTableViewCell.Model(title: "Surrounding Areas / Adjacent Activities", isExtended: false, status: nil, indexPath: IndexPath(row: 0, section: 0)),
